@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <ul>
-          <li><Link href="/contato">Contatos</Link></li>
+          <li><Link href="/contato">Informações para contato</Link></li>
         </ul>
       </section>
     </Layout>
