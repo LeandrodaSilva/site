@@ -1,7 +1,7 @@
 {
     "name": "Leandro da Silva",
     "short_name": "LeandroDaSilva",
-    "start_url": ".",
+    "start_url": "/",
     "scope": "/",
     "display": "standalone",
     "background_color": "#fff",
@@ -11,8 +11,5 @@
       "src": "favicon.ico",
       "sizes": "281x281",
       "type": "image/png"
-    }],
-    "related_applications": [{
-      "platform": "web"
     }]
   }
