@@ -20,7 +20,7 @@ module.exports = withPWA({
             defaultLocale: 'en-US',
           },
           {
-            domain: 'leandrodasilva.pt',
+            domain: 'pt.leandrodasilva.dev',
             defaultLocale: 'pt-BR',
           },
         ],
