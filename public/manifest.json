@@ -1,0 +1,18 @@
+{
+    "name": "Leandro da Silva",
+    "short_name": "LeandroDaSilva",
+    "start_url": ".",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "description": "Learn how to build a personal website using Next.js",
+    "icons": [{
+      "src": "favicon.ico",
+      "sizes": "281x281",
+      "type": "image/png"
+    }],
+    "related_applications": [{
+      "platform": "web"
+    }]
+  }
