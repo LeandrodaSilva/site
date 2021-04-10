@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <Layout>
       <Head>
-        <title>Posts</title>
+        <title>Informações para contato</title>
       </Head>
     </Layout>
   )
