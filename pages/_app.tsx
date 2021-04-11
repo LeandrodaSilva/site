@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head'
 import { AppProps } from 'next/app'
 import { DefaultTheme, ThemeProvider } from 'styled-components';
@@ -21,16 +21,22 @@ function App({ Component, pageProps, darkMode }: AppProps) {
     setMounted(true)
   }, [])
 
-  const [theme, setTheme] = useState<DefaultTheme>(darkModeActive ? combineTheme(dark) : combineTheme(light));
+  const [theme, setTheme] = React.useState<DefaultTheme>(darkModeActive ? combineTheme(dark) : combineTheme(light));
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? combineTheme(dark) : combineTheme(light));
   };
 
+  React.useEffect(() => {
+    console.log('Changed theme to: ', darkModeActive ? 'dark' : 'light')
+    setTheme(darkModeActive ? combineTheme(dark) : combineTheme(light));
+  }, [darkModeActive])
+
   const body = (
     <ThemeProvider theme={theme}>
       <Head>
-        <link href="https://fonts.googleapis.com/css?family=Exo+2:200i" rel="stylesheet"/>
+        <link rel="preload" href="https://fonts.googleapis.com/css?family=Exo+2:200i&display=swap" as="style" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:200i&display=swap" />
         <title/>
       </Head>
       <GlobalStyles />

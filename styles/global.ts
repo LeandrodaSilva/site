@@ -14,12 +14,6 @@ export default createGlobalStyle`
     --neon-border-color: rgb(0, 0, 0);
   }
 
-  * {
-    box-sizing: border-box;
-    border-box: ${props => props.theme.borderBox};
-    text-shadow: ${props => props.theme.textShadow};
-  }
-
   html,
   body {
     background: ${props => props.theme.colors.background};
@@ -31,8 +25,6 @@ export default createGlobalStyle`
     font-style: normal;
     font-size: ${props => props.theme.fontSizes.medium};
     font-weight: 400;
-    src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
-    font-display: swap;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -40,6 +32,8 @@ export default createGlobalStyle`
     font-weight: 200;
     font-style: italic;
     text-transform: uppercase;
+    box-sizing: border-box;
+    text-shadow: ${props => props.theme.textShadow};
   }
 
   h1::-moz-selection, h2::-moz-selection, .cursor {
@@ -64,8 +58,9 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.text};
   }
 
-  a:hover {
+  a:hover, a:focus {
     text-decoration: underline;
+    color: red;
   }
 
   img {
@@ -75,7 +70,7 @@ export default createGlobalStyle`
 
   .switch-container {
     position: fixed;
-    top 0;
+    top: 0;
     right: 0;
     padding: 10px;
   }
