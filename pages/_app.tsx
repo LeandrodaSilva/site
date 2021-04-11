@@ -23,10 +23,6 @@ function App({ Component, pageProps, darkMode }: AppProps) {
 
   const [theme, setTheme] = useState<DefaultTheme>(darkModeActive ? combineTheme(dark) : combineTheme(light));
 
-  React.useEffect(() => {
-    setTheme(darkModeActive ? combineTheme(dark) : combineTheme(light))
-  }, [darkModeActive])
-
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? combineTheme(dark) : combineTheme(light));
   };
