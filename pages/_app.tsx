@@ -58,7 +58,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                 paddingRight: 2
               }}
             >
-              {darkIcon}
+              {lightIcon}
             </div>
           }
           uncheckedIcon={
@@ -73,7 +73,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                 paddingRight: 2
               }}
             >
-              {lightIcon}
+              {darkIcon}
             </div>
           }
           checked={theme.title === 'dark'}
