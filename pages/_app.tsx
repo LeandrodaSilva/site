@@ -60,9 +60,8 @@ function App({ Component, pageProps, darkMode }: AppProps) {
         <title/>
       </Head>
       <GlobalStyles />
-      <div className="switch-container" aria-hidden="true">
+      <div className="switch-container">
         <Switch
-          aria-hidden="true"
           id="switch"
           className="switch"
           onColor="#3b3b3b"
