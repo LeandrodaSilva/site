@@ -26,6 +26,12 @@ export default createGlobalStyle`
     font-size: ${props => props.theme.fontSizes.medium};
     font-weight: 400;
   }
+  
+  main {
+    padding: 2em;
+    background-color: ${props => props.theme.colors.primary};
+    border-radius: 10px;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     font-size: 13rem;
