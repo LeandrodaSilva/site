@@ -69,7 +69,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                 alignItems: "center",
                 height: "100%",
                 fontSize: 15,
-                color: "white",
+                color: "black",
                 paddingRight: 2
               }}
             >
