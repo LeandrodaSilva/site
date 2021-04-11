@@ -85,4 +85,8 @@ export default createGlobalStyle`
     vertical-align: middle;
     margin-left: 4px;
   }
+  
+  .hidden {
+    display: none;
+  }
 `;
