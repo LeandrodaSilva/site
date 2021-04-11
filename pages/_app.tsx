@@ -25,8 +25,19 @@ function App({ Component, pageProps, darkMode }: AppProps) {
 
   const toggleTheme = () => {
     console.log(defaultMode)
-    setTheme(theme.title === 'light' ? combineTheme(dark) : combineTheme(light));
-    if(localStorage) localStorage.setItem('theme', theme.title === 'light' ? 'dark' : 'light');
+    let toDark = theme.title === 'light';
+    setTheme(toDark ? combineTheme(dark) : combineTheme(light));
+    if(localStorage) {
+      if (toDark && darkModeActive) {
+        localStorage.removeItem('theme');
+        return
+      }
+      if (!toDark && !darkModeActive) {
+        localStorage.removeItem('theme');
+        return
+      }
+      localStorage.setItem('theme', toDark ? 'dark' : 'light');
+    }
   };
 
   React.useEffect(() => {
@@ -34,6 +45,8 @@ function App({ Component, pageProps, darkMode }: AppProps) {
       let savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
         setTheme(savedTheme === 'dark' ? combineTheme(dark) : combineTheme(light));
+      } else {
+        setTheme(darkModeActive ? combineTheme(dark) : combineTheme(light));
       }
     } else {
       setTheme(darkModeActive ? combineTheme(dark) : combineTheme(light));
