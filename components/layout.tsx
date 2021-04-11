@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
 const name = 'Leandro da Silva'
-export const siteTitle = 'Leandro da Silva Website'
+export const siteTitle = 'Leandro da Silva'
 
 export default function Layout({
   children,
@@ -22,8 +22,9 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Leandro da Silva website"
         />
+        <link rel="apple-touch-icon" href="/images/icons/maskable_icon_x192.png">
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
