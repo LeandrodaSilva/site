@@ -6,7 +6,7 @@ import utilStyles from '../../styles/utils.module.css'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import { useRouter } from 'next/router'
 
-export default function Post({
+function Post({
   postData
 }: {
   postData: {
@@ -53,3 +53,5 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   }
 }
+
+// export default Post
