@@ -61,81 +61,80 @@ function App({ Component, pageProps, darkMode }: AppProps) {
       </Head>
       <GlobalStyles />
       <div className="switch-container">
-        <label for="switch">
+        <label>
           Theme
+          <Switch
+            className="switch"
+            onColor="#3b3b3b"
+            offColor="#d1d1d1"
+            offHandleColor="#000"
+            checkedHandleIcon={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontSize: 15,
+                  color: "black",
+                  paddingRight: 2
+                }}
+              >
+                {darkIcon}
+              </div>
+            }
+            checkedIcon={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontSize: 15,
+                  color: "white",
+                  paddingRight: 2,
+                  opacity: '0.5',
+                }}
+              >
+                {lightIcon}
+              </div>
+            }
+            uncheckedHandleIcon={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontSize: 15,
+                  color: "white",
+                  paddingRight: 2
+                }}
+              >
+                {lightIcon}
+              </div>
+            }
+            uncheckedIcon={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100%",
+                  fontSize: 15,
+                  color: "black",
+                  paddingRight: 2,
+                  opacity: '0.5',
+                }}
+              >
+                {darkIcon}
+              </div>
+            }
+            checked={theme.title === 'dark'}
+            activeBoxShadow="0 0 2px 3px #fff"
+            onChange={toggleTheme}
+          />
         </label>
-        <Switch
-          id="switch"
-          className="switch"
-          onColor="#3b3b3b"
-          offColor="#d1d1d1"
-          offHandleColor="#000"
-          checkedHandleIcon={
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-                fontSize: 15,
-                color: "black",
-                paddingRight: 2
-              }}
-            >
-              {darkIcon}
-            </div>
-          }
-          checkedIcon={
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-                fontSize: 15,
-                color: "white",
-                paddingRight: 2,
-                opacity: '0.5',
-              }}
-            >
-              {lightIcon}
-            </div>
-          }
-          uncheckedHandleIcon={
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-                fontSize: 15,
-                color: "white",
-                paddingRight: 2
-              }}
-            >
-              {lightIcon}
-            </div>
-          }
-          uncheckedIcon={
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100%",
-                fontSize: 15,
-                color: "black",
-                paddingRight: 2,
-                opacity: '0.5',
-              }}
-            >
-              {darkIcon}
-            </div>
-          }
-          checked={theme.title === 'dark'}
-          activeBoxShadow="0 0 2px 3px #fff"
-          onChange={toggleTheme}
-        />
       </div>
       <Component {...pageProps} />
     </ThemeProvider>
