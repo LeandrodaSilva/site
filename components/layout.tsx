@@ -24,7 +24,7 @@ export default function Layout({
           name="description"
           content="Leandro da Silva website"
         />
-        <link rel="apple-touch-icon" href="/images/icons/maskable_icon_x192.png">
+        <link rel="apple-touch-icon" href="/images/icons/maskable_icon_x192.png"/>
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
