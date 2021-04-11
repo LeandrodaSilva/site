@@ -36,14 +36,13 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllPostIds(locales) {
+export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
   return fileNames.map(fileName => {
     return {
       params: {
         id: fileName.replace(/\.md$/, '')
       },
-      locale: 'en-US'
     }
   })
 }

@@ -37,8 +37,8 @@ export default function Post({
   )
 }
 
-export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
-  const paths = getAllPostIds(locales)
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = getAllPostIds()
   return {
     paths,
     fallback: true

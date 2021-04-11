@@ -50,8 +50,6 @@ h1, h2 {
     font-size: 13rem;
     font-weight: 200;
     font-style: italic;
-    color: #fff;
-    background-color: black;
     text-transform: uppercase;
     background-color: var(--neon-border-color);
 }
