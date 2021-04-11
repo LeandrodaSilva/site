@@ -24,7 +24,6 @@ function App({ Component, pageProps, darkMode }: AppProps) {
   const [theme, setTheme] = React.useState<DefaultTheme>(darkModeActive ? combineTheme(dark) : combineTheme(light));
 
   const toggleTheme = () => {
-    console.log(defaultMode)
     let toDark = theme.title === 'light';
     setTheme(toDark ? combineTheme(dark) : combineTheme(light));
     if(localStorage) {
