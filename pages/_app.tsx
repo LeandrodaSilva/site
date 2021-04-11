@@ -14,7 +14,7 @@ const lightIcon = <FontAwesomeIcon height={15} icon={faSun} />
 
 // @ts-ignore
 function App({ Component, pageProps, darkMode }: AppProps) {
-  const { darkModeActive } = darkMode
+  const { darkModeActive, defaultMode } = darkMode
   const [mounted, setMounted] = React.useState(false)
 
   React.useEffect(() => {
@@ -24,16 +24,24 @@ function App({ Component, pageProps, darkMode }: AppProps) {
   const [theme, setTheme] = React.useState<DefaultTheme>(darkModeActive ? combineTheme(dark) : combineTheme(light));
 
   const toggleTheme = () => {
+    console.log(defaultMode)
     setTheme(theme.title === 'light' ? combineTheme(dark) : combineTheme(light));
+    if(localStorage) localStorage.setItem('theme', theme.title === 'light' ? 'dark' : 'light');
   };
 
   React.useEffect(() => {
-    console.log('Changed theme to: ', darkModeActive ? 'dark' : 'light')
-    setTheme(darkModeActive ? combineTheme(dark) : combineTheme(light));
+    if (localStorage) {
+      let savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        setTheme(savedTheme === 'dark' ? combineTheme(dark) : combineTheme(light));
+      }
+    } else {
+      setTheme(darkModeActive ? combineTheme(dark) : combineTheme(light));
+    }
   }, [darkModeActive])
 
   const body = (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={{ darkMode: darkModeActive, ...theme }}>
       <Head>
         <link rel="preload" href="https://fonts.googleapis.com/css?family=Exo+2:200i&display=swap" as="style" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:200i&display=swap" />
@@ -46,7 +54,38 @@ function App({ Component, pageProps, darkMode }: AppProps) {
           onColor="#3b3b3b"
           offColor="#d1d1d1"
           offHandleColor="#000"
+          checkedHandleIcon={
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%",
+                fontSize: 15,
+                color: "black",
+                paddingRight: 2
+              }}
+            >
+              {darkIcon}
+            </div>
+          }
           checkedIcon={
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "100%",
+                fontSize: 15,
+                color: "white",
+                paddingRight: 2,
+                opacity: '0.5',
+              }}
+            >
+              {lightIcon}
+            </div>
+          }
+          uncheckedHandleIcon={
             <div
               style={{
                 display: "flex",
@@ -70,7 +109,8 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                 height: "100%",
                 fontSize: 15,
                 color: "black",
-                paddingRight: 2
+                paddingRight: 2,
+                opacity: '0.5',
               }}
             >
               {darkIcon}
