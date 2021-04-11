@@ -7,7 +7,7 @@ module.exports = withPWA({
     i18n: {
         // These are all the locales you want to support in
         // your application
-        locales: ['en-US', 'pt'],
+        locales: ['en-US', 'pt-BR'],
         // This is the default locale you want to be used when visiting
         // a non-locale prefixed path e.g. `/hello`
         defaultLocale: 'en-US',
@@ -20,8 +20,8 @@ module.exports = withPWA({
             defaultLocale: 'en-US',
           },
           {
-            domain: 'pt.leandrodasilva.dev',
-            defaultLocale: 'pt',
+            domain: 'pt-br.leandrodasilva.dev',
+            defaultLocale: 'pt-BR',
           },
         ],
       },
