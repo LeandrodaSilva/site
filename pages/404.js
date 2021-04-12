@@ -1,4 +1,3 @@
-import utilStyles from '../styles/utils.module.css'
 import errorStyles from '../styles/error.module.css'
 
 export default function Custom404() {
