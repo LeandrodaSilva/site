@@ -8,6 +8,27 @@ import GlobalStyles from '../styles/global';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import withDarkMode from 'next-dark-mode'
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAarmlwKyesRsEwKcim8SxmN1V2QHlBJhs",
+  authDomain: "leandrodasilva-8e662.firebaseapp.com",
+  projectId: "leandrodasilva-8e662",
+  storageBucket: "leandrodasilva-8e662.appspot.com",
+  messagingSenderId: "463584427446",
+  appId: "1:463584427446:web:863dc8f71989b8ba3fd517",
+  measurementId: "G-Z990GH61TR"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 const darkIcon = <FontAwesomeIcon height={15} icon={faMoon} />
 const lightIcon = <FontAwesomeIcon height={15} icon={faSun} />
