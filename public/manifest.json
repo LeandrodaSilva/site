@@ -1,12 +1,12 @@
 {
   "name": "Leandro da Silva",
-  "short_name": "LeandroDaSilva",
+  "short_name": "LDS",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#fff",
-  "description": "Leandro da Silva website",
+  "description": "My website",
   "icons": [
     {
       "src": "images/icons/windows10/SmallTile.scale-100.png",
