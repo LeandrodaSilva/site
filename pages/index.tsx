@@ -1,14 +1,14 @@
-import React from "react"
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
+import React from "react";
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
+import utilStyles from "../styles/utils.module.css";
 // import { getSortedPostsData } from '../lib/posts'
 // import Link from 'next/link'
 // import Date from '../components/date'
 // import { GetStaticProps } from 'next'
-import * as icons from "@fortawesome/free-solid-svg-icons"
-import * as brandsIcons from "@fortawesome/free-brands-svg-icons"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import * as icons from "@fortawesome/free-solid-svg-icons";
+import * as brandsIcons from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // export const getStaticProps: GetStaticProps = async () => {
 //   const allPostsData = getSortedPostsData()
@@ -37,15 +37,17 @@ export default function Home() {
       </Head>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Links</h2>
+        <h2 className={utilStyles.headingLg}>Contato</h2>
         <ul className={utilStyles.list}>
           <li className={utilStyles.listItem}>
-            <FontAwesomeIcon height={15} icon={icons.faEnvelope} />{'  '}
-            <a href="mailto:ld_silva13@hotmail.com?subject=Olá%20Leandro">ld_silva13@hotmail.com</a>
+            <FontAwesomeIcon height={15} icon={icons.faEnvelope} />{"  "}
+            <a href="mailto:ld_silva13@hotmail.com?subject=Olá%20Leandro">
+              ld_silva13@hotmail.com
+            </a>
           </li>
 
           <li className={utilStyles.listItem}>
-            <FontAwesomeIcon height={15} icon={brandsIcons.faGithub} />{'  '}
+            <FontAwesomeIcon height={15} icon={brandsIcons.faGithub} />{"  "}
             <a href="https://github.com/LeandrodaSilva">LeandroDaSilva</a>
           </li>
         </ul>
@@ -71,5 +73,5 @@ export default function Home() {
       {/*  </section>*/}
       {/*}*/}
     </Layout>
-  )
+  );
 }

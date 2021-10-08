@@ -1,53 +1,39 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "./layout.module.css";
+import utilStyles from "../styles/utils.module.css";
+import Link from "next/link";
 
-export const name = 'Leandro da Silva'
-export const siteTitle = 'Leandro da Silva'
+export const name = "Leandro S.";
+export const siteTitle = "Leandro S.";
 
 export default function Layout({
   children,
-  home
+  home,
 }: {
-  children: React.ReactNode
-  home?: boolean
+  children: React.ReactNode;
+  home?: boolean;
 }) {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCircle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
+        {home
+          ? (
+            <>
+              
+            </>
+          )
+          : (
+            <>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
-            </h2>
-          </>
-        )}
+              <h2 className={utilStyles.headingLg}>
+                <Link href="/">
+                  <a className={utilStyles.colorInherit}>{name}</a>
+                </Link>
+              </h2>
+            </>
+          )}
       </header>
       <main>{children}</main>
       {!home && (
@@ -57,6 +43,7 @@ export default function Layout({
           </Link>
         </div>
       )}
+      <footer><a id="digitalocean-referral" href="https://www.digitalocean.com/?refcode=869ca71ee1c6&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%202.svg" alt="DigitalOcean Referral Badge" /></a></footer>
     </div>
-  )
+  );
 }
