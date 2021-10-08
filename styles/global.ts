@@ -110,8 +110,8 @@ export default createGlobalStyle`
   //   padding: 10px;
   // }
 
-  .switch-container label span {
-    display: none;
+  .switch-container label {
+    color: transparent;
   }
 
   .switch {
