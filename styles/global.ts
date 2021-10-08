@@ -81,6 +81,10 @@ export default createGlobalStyle`
     padding: 10px;
   }
 
+  .switch-container label span {
+    display: none;
+  }
+
   .switch {
     vertical-align: middle;
     margin-left: 4px;

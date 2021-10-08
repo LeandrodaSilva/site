@@ -62,7 +62,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
       <GlobalStyles />
       <div className="switch-container">
         <label>
-          Theme
+          <span>Theme</span>
           <Switch
             className="switch"
             onColor="#3b3b3b"
