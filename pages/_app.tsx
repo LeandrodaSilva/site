@@ -95,7 +95,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
           </span>
           <div className="switch-container">
             <label>
-              Theme
+              Tema
               <Switch
                 className="switch"
                 onColor="#3b3b3b"

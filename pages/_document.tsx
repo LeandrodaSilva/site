@@ -39,28 +39,25 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
+          <meta charSet="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content="#000000" />
+          <meta name="theme-color" content="#fff" />
           <link rel="icon" href="/favicon.ico" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+          <link rel="apple-touch-icon" href="/images/maskable_icon_x192.png" />
           <meta
             name="description"
-            content="Leandro da Silva website"
+            content="Leandro website"
           />
           <link
             rel="apple-touch-icon"
             href="/images/icons/maskable_icon_x192.png"
           />
-          <meta
-            property="og:image"
-            content={`https://og-image.vercel.app/${
-              encodeURI(
-                siteTitle,
-              )
-            }.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
-          <title>Leandro da Silva</title>
+          <title>LS</title>
         </Head>
         <body>
           <Main />
