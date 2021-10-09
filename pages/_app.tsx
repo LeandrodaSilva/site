@@ -26,8 +26,14 @@ function App({ Component, pageProps, darkMode }: AppProps) {
     darkModeActive ? combineTheme(dark) : combineTheme(light),
   );
 
+  function play() {
+    let audio = document.getElementById("a1");
+    audio.play();
+  }
+
   const toggleTheme = () => {
     let toDark = theme.title === "light";
+    play();
     setTheme(toDark ? combineTheme(dark) : combineTheme(light));
     if (localStorage) {
       if (toDark && darkModeActive) {
@@ -60,6 +66,10 @@ function App({ Component, pageProps, darkMode }: AppProps) {
   const body = (
     <ThemeProvider theme={{ darkMode: darkModeActive, ...theme }}>
       <div id="main-container" className={theme.title}>
+        <audio id="a1" hidden>
+          <source src="/sounds/click.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
