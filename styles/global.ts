@@ -32,13 +32,15 @@ export default createGlobalStyle`
     height: 100vh;
     width: 100vw;
     backdrop-filter: invert(1);
+    display: contents;
   }
   
   main {
     padding: 2em;
     background-color: ${(props) => props.theme.colors.primary};
     border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    word-break: break-word;
   }
 
   nav {
@@ -118,7 +120,7 @@ export default createGlobalStyle`
     vertical-align: middle;
     margin-left: 4px;
   }
-  
+
   .hidden {
     display: none;
   }
@@ -143,9 +145,7 @@ export default createGlobalStyle`
     content: attr(data-letter);
     color: ${(props) => props.theme.colors.background};
     position: inherit;
-    text-shadow: -1px 0px 0px ${(props) =>
-  props.theme.colors.text}, 0px 0px 2px ${(props) =>
-  props.theme.colors.background};
+    text-shadow: -1px 0px 0px ${(props) => props.theme.colors.text};
     left: 45px;
     pointer-events: all;
     z-index: 3;
@@ -154,9 +154,6 @@ export default createGlobalStyle`
   .letter:after {
     content: "S";
     color: ${(props) => props.theme.colors.background};
-    text-shadow: -1px 0px 0px ${(props) =>
-  props.theme.colors.text}, 0px 0px 2px ${(props) =>
-  props.theme.colors.background};
     opacity: 0;
     position: inherit;
     left: 90px;
@@ -170,18 +167,30 @@ export default createGlobalStyle`
     pointer-events: all;
   }
   .letter:hover:before {
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.backgroundHover};
     content: "L";
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
   }
   .letter:hover:after {
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.backgroundHover};
     content: "S";
     opacity: 1;
     left: 0px;
     pointer-events: all;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
   }
 
   .dark  a#digitalocean-referral img{
     filter: invert(1) grayscale(1);
+  }
+
+  #main-container {
+    width: 100vw;
+  }
+
+  @media only screen and (max-width: 360px) {
+    main {
+      width: 100vw;
+    }
   }
 `;
