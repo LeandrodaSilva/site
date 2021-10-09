@@ -27,7 +27,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
   );
 
   function play() {
-    let audio = document.getElementById("a1");
+    let audio = document.getElementById("a1") as HTMLAudioElement;
     audio.play();
   }
 
