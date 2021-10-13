@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import withDarkMode from "next-dark-mode";
 import utilStyles from "../styles/utils.module.css";
+import { useRouter } from "next/router";
+import { siteTitle } from "../components/layout";
 
 const darkIcon = <FontAwesomeIcon height={15} icon={faMoon} />;
 const lightIcon = <FontAwesomeIcon height={15} icon={faSun} />;
@@ -17,6 +19,20 @@ const lightIcon = <FontAwesomeIcon height={15} icon={faSun} />;
 function App({ Component, pageProps, darkMode }: AppProps) {
   const { darkModeActive, defaultMode } = darkMode;
   const [mounted, setMounted] = React.useState(false);
+  const router = useRouter();
+
+  const handleRouteChange = (url) => {
+    window.gtag("config", "[Tracking ID]", {
+      page_path: url,
+    });
+  };
+
+  React.useEffect(() => {
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   React.useEffect(() => {
     setMounted(true);
@@ -71,6 +87,39 @@ function App({ Component, pageProps, darkMode }: AppProps) {
           Your browser does not support the audio element.
         </audio>
         <Head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#fff" />
+          <link rel="icon" href="/favicon.ico" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+          <link rel="apple-touch-icon" href="/images/maskable_icon_x192.png" />
+          <meta
+            name="description"
+            content="Leandro website"
+          />
+          <link
+            rel="apple-touch-icon"
+            href="/images/icons/maskable_icon_x192.png"
+          />
+          <meta name="og:title" content={siteTitle} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-904BVECD5L"
+          >
+          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-904BVECD5L', { page_path: window.location.pathname });
+              `,
+            }}
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link

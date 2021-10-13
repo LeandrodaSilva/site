@@ -6,7 +6,6 @@ import Document, {
   NextScript,
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
-import { siteTitle } from "../components/layout";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -39,25 +38,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-br">
         <Head>
-          <meta charSet="utf-8"/>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="manifest" href="/manifest.json" />
-          <meta name="theme-color" content="#fff" />
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-          <link rel="apple-touch-icon" href="/images/maskable_icon_x192.png" />
-          <meta
-            name="description"
-            content="Leandro website"
-          />
-          <link
-            rel="apple-touch-icon"
-            href="/images/icons/maskable_icon_x192.png"
-          />
-          <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <title>LS</title>
+          <title>Leandro S.</title>
         </Head>
         <body>
           <Main />
