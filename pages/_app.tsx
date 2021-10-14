@@ -234,7 +234,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
           }}
           buttonStyle={{
             color: theme.title === "dark" ? "#000" : "#fff",
-            background: theme.title === "dark" ? "green" : "green",
+            background: theme.title === "dark" ? "#fff" : "#000",
             fontSize: "13px",
           }}
           expires={150}
