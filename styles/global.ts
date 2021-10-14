@@ -38,7 +38,8 @@ export default createGlobalStyle`
   
   main {
     padding: 2em;
-    background-color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.primaryA};
+    backdrop-filter: blur(5px);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     word-break: break-word;

@@ -3,6 +3,7 @@ export default {
 
   colors: {
     primary: "#d1d1d1",
+    primaryA: "rgba(209,209,209, 0.9)",
     secundary: "#919090",
     background: "#fff",
     backgroundHover: "rgba(255, 255, 255, 0.8)",
