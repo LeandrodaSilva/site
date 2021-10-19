@@ -19,7 +19,7 @@ export default function Layout({
       <img className={styles.background} src="/images/world.svg" width="1920" height="1080" alt="World Map" />
       <main>{children}</main>
       <footer>
-        <a
+<!--         <a
           id="digitalocean-referral"
           href="https://www.digitalocean.com/?refcode=869ca71ee1c6&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"
         >
@@ -29,7 +29,7 @@ export default function Layout({
             height="65"
             alt="DigitalOcean Referral Badge"
           />
-        </a>
+        </a> -->
       </footer>
     </div>
   );
