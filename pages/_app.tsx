@@ -221,26 +221,6 @@ function App({ Component, pageProps, darkMode }: AppProps) {
             </label>
           </div>
         </nav>
-        <CookieConsent
-          location="bottom"
-          buttonText="OK"
-          style={{
-            backgroundColor: theme.title === "dark"
-              ? "rgba(255, 255, 255,0.5)"
-              : "rgba(0, 0, 0,0.5)",
-            backdropFilter: "blur(5px)",
-            color: theme.title === "dark" ? "#000" : "#fff",
-            fontFamily: "'Exo 2', sans-serif",
-          }}
-          buttonStyle={{
-            color: theme.title === "dark" ? "#000" : "#fff",
-            background: theme.title === "dark" ? "#fff" : "#000",
-            fontSize: "13px",
-          }}
-          expires={150}
-        >
-          This website uses cookies to enhance the user experience.{" "}
-        </CookieConsent>
         <Component {...pageProps} />
       </div>
     </ThemeProvider>
