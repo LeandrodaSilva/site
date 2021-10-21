@@ -19,7 +19,7 @@ export default function Home() {
           <li className={utilStyles.listItem}>
             <FontAwesomeIcon height={15} icon={icons.faEnvelope} />{"  "}
             <a href="mailto:ld_silva13@hotmail.com?subject=Olá%20Leandro">
-              ld_silva13@hotmail.com
+              me@leandrodasilva.dev
             </a>
           </li>
 
