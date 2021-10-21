@@ -27,6 +27,11 @@ export default function Home() {
             <FontAwesomeIcon height={15} icon={brandsIcons.faGithub} />{"  "}
             <a href="https://github.com/LeandrodaSilva">LeandroDaSilva</a>
           </li>
+          
+          <li className={utilStyles.listItem}>
+            <FontAwesomeIcon height={15} icon={brandsIcons.faKeybase} />{"  "}
+            <a href="https://keybase.io/ldsilva">ldsilva</a>
+          </li>
         </ul>
       </section>
     </Layout>
