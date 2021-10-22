@@ -105,8 +105,12 @@ function App({ Component, pageProps, darkMode }: AppProps) {
             rel="apple-touch-icon"
             href="/images/icons/maskable_icon_x192.png"
           />
+          <link rel="me" href="mailto:me@leandrodasilva.dev" />
+          <meta property="og:url" content="https://leandrodasilva.dev" />
           <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:card" content="summary"/>
+          <meta name="twitter:site" content="@ld_silva13"/>
+          <meta name="twitter:title" content="leandrodasilva.dev" />
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-904BVECD5L"

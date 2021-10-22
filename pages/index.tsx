@@ -13,6 +13,8 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
 
+      <h1 hidden aria-hidden="false">{siteTitle}</h1>
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Contato</h2>
         <ul className={utilStyles.list}>
@@ -27,7 +29,7 @@ export default function Home() {
             <FontAwesomeIcon height={15} icon={brandsIcons.faGithub} />{"  "}
             <a href="https://github.com/LeandrodaSilva">LeandroDaSilva</a>
           </li>
-          
+
           <li className={utilStyles.listItem}>
             <FontAwesomeIcon height={15} icon={brandsIcons.faKeybase} />{"  "}
             <a href="https://keybase.io/ldsilva">ldsilva</a>

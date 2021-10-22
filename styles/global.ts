@@ -8,7 +8,6 @@ export default createGlobalStyle`
     src: local('Pacifico Regular'), local('Pacifico-Regular'), url(https://fonts.gstatic.com/s/pacifico/v12/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2) format('woff2');
     font-display: swap;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
 
   :root {
     --neon-text-color: rgba(255, 255, 255, 0.212);
@@ -44,6 +43,7 @@ export default createGlobalStyle`
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     word-break: break-word;
     transition: all 2s ease;
+    font-family: Lab\ 2,Helvetica,sans-serif;
   }
 
   nav {
@@ -196,5 +196,16 @@ export default createGlobalStyle`
     main {
       width: 100vw;
     }
+  }
+
+  .noise {
+    background-image: url("images/noise.svg");
+    opacity: 0.4;
+    z-index: -2;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 `;

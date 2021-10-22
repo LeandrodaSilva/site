@@ -13,6 +13,8 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "dom-parser": "^0.1.6",
+    "dom-to-svg": "^0.12.2",
     "gray-matter": "^4.0.2",
     "next": "^11.1.2",
     "next-dark-mode": "^3.0.0",
