@@ -1,7 +1,7 @@
 describe("Rendering", () => {
   it("should view home page", () => {
     // Start from the index page
-    cy.visit("http://localhost:3000/");
+    cy.visit("/");
 
     // The page should contain an h2 with "Contato"
     cy.get("h2").contains("Contato");
