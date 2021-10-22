@@ -4,14 +4,16 @@ import { AppProps } from "next/app";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 import Switch from "react-switch";
 import { combineTheme, dark, light } from "../styles/themes";
-import GlobalStyles from "../styles/global";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import withDarkMode from "next-dark-mode";
 import utilStyles from "../styles/utils.module.css";
+import styles from "../styles/app.module.css";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import { siteTitle } from "../components/layout";
-import CookieConsent from "react-cookie-consent";
+import GlobalStyles from "../styles/global";
+import Image from "next/image";
 
 const darkIcon = <FontAwesomeIcon height={15} icon={faMoon} />;
 const lightIcon = <FontAwesomeIcon height={15} icon={faSun} />;
@@ -91,57 +93,27 @@ function App({ Component, pageProps, darkMode }: AppProps) {
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#fff" />
-          <link rel="icon" href="/favicon.ico" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-          <link rel="apple-touch-icon" href="/images/maskable_icon_x192.png" />
           <meta
             name="description"
             content="Leandro website"
           />
+          <meta property="og:url" content="https://leandrodasilva.dev" />
+          <meta name="og:title" content={siteTitle} />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@ld_silva13" />
+          <meta name="twitter:title" content="leandrodasilva.dev" />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/images/maskable_icon_x192.png" />
           <link
             rel="apple-touch-icon"
             href="/images/icons/maskable_icon_x192.png"
           />
           <link rel="me" href="mailto:me@leandrodasilva.dev" />
-          <meta property="og:url" content="https://leandrodasilva.dev" />
-          <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary"/>
-          <meta name="twitter:site" content="@ld_silva13"/>
-          <meta name="twitter:title" content="leandrodasilva.dev" />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-904BVECD5L"
-          >
-          </script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-904BVECD5L', { page_path: window.location.pathname });
-              `,
-            }}
-          />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            rel="preload"
-            href="https://fonts.googleapis.com/css?family=Exo+2:200i&display=swap"
-            as="style"
-          />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Exo+2:200i&display=swap"
-          />
-          <title />
+          <title>{siteTitle}</title>
         </Head>
         <GlobalStyles />
         <nav>
@@ -156,7 +128,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                 onColor="#3b3b3b"
                 offColor="#d1d1d1"
                 offHandleColor="#000"
-                checkedHandleIcon={(
+                checkedHandleIcon={
                   <div
                     style={{
                       display: "flex",
@@ -170,8 +142,8 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                   >
                     {darkIcon}
                   </div>
-                )}
-                checkedIcon={(
+                }
+                checkedIcon={
                   <div
                     style={{
                       display: "flex",
@@ -186,8 +158,8 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                   >
                     {lightIcon}
                   </div>
-                )}
-                uncheckedHandleIcon={(
+                }
+                uncheckedHandleIcon={
                   <div
                     style={{
                       display: "flex",
@@ -201,8 +173,8 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                   >
                     {lightIcon}
                   </div>
-                )}
-                uncheckedIcon={(
+                }
+                uncheckedIcon={
                   <div
                     style={{
                       display: "flex",
@@ -217,7 +189,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
                   >
                     {darkIcon}
                   </div>
-                )}
+                }
                 checked={theme.title === "dark"}
                 activeBoxShadow="0 0 2px 3px #fff"
                 onChange={toggleTheme}
@@ -225,8 +197,38 @@ function App({ Component, pageProps, darkMode }: AppProps) {
             </label>
           </div>
         </nav>
+        <Image
+          className={styles.noise}
+          src="/images/noise.svg"
+          alt="World Map"
+          layout="fill"
+          objectFit="cover"
+        />
+        <Image
+          className={styles.background}
+          src="/images/world.svg"
+          alt="World Map"
+          layout="fill"
+          objectFit="cover"
+          quality={50}
+        />
         <Component {...pageProps} />
       </div>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-904BVECD5L"
+      />
+      <Script
+        id="gtag-script"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-904BVECD5L', { page_path: window.location.pathname });
+          `,
+        }}
+      />
     </ThemeProvider>
   );
 

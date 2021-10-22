@@ -24,7 +24,7 @@ export default createGlobalStyle`
     font-style: normal;
     font-size: ${(props) => props.theme.fontSizes.medium};
     font-weight: 400;
-    height: 100vh;
+    height: auto;
     width: 100vw;
     backdrop-filter: invert(1);
     display: contents;
@@ -124,12 +124,9 @@ export default createGlobalStyle`
     display: block;
   }
 
-  // .switch-container {
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   padding: 10px;
-  // }
+  .switch-container {
+    z-index: 1;
+  }
 
   .switch-container label {
     color: transparent;
@@ -205,12 +202,13 @@ export default createGlobalStyle`
   }
 
   #main-container {
-    width: 100vw;
+    height: 100vh;
+    width: auto;
   }
 
   @media only screen and (max-width: 360px) {
     main {
-      width: 100vw;
+      heigth: 100vw;
     }
   }
 
@@ -223,6 +221,6 @@ export default createGlobalStyle`
     position: absolute;
     right: 0;
     top: 0;
-    background-size: 100% auto;
+    background-size: auto 100%;
   }
 `;
