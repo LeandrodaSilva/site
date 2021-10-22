@@ -223,12 +223,6 @@ export default createGlobalStyle`
     position: absolute;
     right: 0;
     top: 0;
-    animation: noise 20s infinite;
-    background-position: left bottom;
-  }
-  @keyframes noise {
-    0% {background-size: 130% auto;}
-    50% {background-size: 110% auto;}
-    100% {background-size: 130% auto;}
+    background-size: 100% auto;
   }
 `;

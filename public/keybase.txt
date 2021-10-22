@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/ldsilva
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://leandrodasilva.dev
+  * I am ldsilva (https://keybase.io/ldsilva) on keybase.
+  * I have a public key ASC259uC3NGd3r9OuHSk9fKfd2goyc4WN9qbnnkIiZGZggo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b6e7db82dcd19ddebf4eb874a4f5f29f776828c9ce1637da9b9e7908899199820a",
+      "host": "keybase.io",
+      "kid": "0120b6e7db82dcd19ddebf4eb874a4f5f29f776828c9ce1637da9b9e7908899199820a",
+      "uid": "efc2c3000f518e0fcd0496efe6173b19",
+      "username": "ldsilva"
+    },
+    "merkle_root": {
+      "ctime": 1634931104,
+      "hash": "80f232775d98c224b616b9413037a1f111355e285c7b7a9b6cda18bfce46d6167446a20cf218cfec74ad67439c1030eb6e4b446e986ac990711e52aa6060c8ef",
+      "hash_meta": "4179de76dad3d6c74543a48db2676a4b74762ff14d805ff7e30735110c34be8f",
+      "seqno": 21043331
+    },
+    "service": {
+      "entropy": "VCEVL/sris/kWTksvS/lFzeW",
+      "hostname": "leandrodasilva.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.8.0"
+  },
+  "ctime": 1634931134,
+  "expire_in": 504576000,
+  "prev": "f8fb83c8d8e22d92d1a87c76b5c6814e6fe7c5cf8900cac8b6b21b0131b39301",
+  "seqno": 22,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgtufbgtzRnd6/Trh0pPXyn3doKMnOFjfam555CImRmYIKp3BheWxvYWTESpcCFsQg+PuDyNjiLZLRqHx2tcaBTm/nxc+JAMrItrIbATGzkwHEIE3uaRhSq7/2OIEJTPeyYcXMrtNkr/6+HC/J1LVqqadQAgHCo3NpZ8RAIM/+nBj3HH9YErhlPzorXjgr0oUBxMjrT/KTRrt7AHnW2HDiKE8/HglC+yZJ6r367VEI3gzjoucQUH+8zcexDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIODyLCYhjoCu/Ww5aiwsPAosi5/TegVb7Tc3yuqTjyDRo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/ldsilva
+
+==================================================================
