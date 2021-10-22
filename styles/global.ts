@@ -31,7 +31,7 @@ export default createGlobalStyle`
     background: linear-gradient(to right, #000 50%, #fff 50%);
     background-size: 200% 100%;
     background-position: ${(props) =>
-  props.theme.title === "light" ? "right bottom" : "left bottom"}; ;
+  props.theme.title === "light" ? "right bottom" : "left bottom"};
    transition: background-position 2s ease;
     -webkit-transform: translateZ(0);
    -moz-transform: translateZ(0);
@@ -223,5 +223,12 @@ export default createGlobalStyle`
     position: absolute;
     right: 0;
     top: 0;
+    animation: noise 20s infinite;
+    background-position: left bottom;
+  }
+  @keyframes noise {
+    0% {background-size: 130% auto;}
+    50% {background-size: 110% auto;}
+    100% {background-size: 130% auto;}
   }
 `;
