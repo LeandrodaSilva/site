@@ -16,6 +16,7 @@ export default createGlobalStyle`
 
   html,
   body {
+    will-change: background-position;
     color: ${(props) => props.theme.colors.text};
     padding: 0;
     margin: 0;
@@ -32,24 +33,7 @@ export default createGlobalStyle`
     background-size: 200% 100%;
     background-position: ${(props) =>
   props.theme.title === "light" ? "right bottom" : "left bottom"};
-   transition: background-position 2s ease;
-    -webkit-transform: translateZ(0);
-   -moz-transform: translateZ(0);
-   -ms-transform: translateZ(0);
-   -o-transform: translateZ(0);
-   transform: translateZ(0);
-   -webkit-backface-visibility: hidden;
-   -moz-backface-visibility: hidden;
-   -ms-backface-visibility: hidden;
-   backface-visibility: hidden;
-   -webkit-perspective: 1000;
-   -moz-perspective: 1000;
-   -ms-perspective: 1000;
-   perspective: 1000;
-   -webkit-transform: translate3d(0, 0, 0);
-   -moz-transform: translate3d(0, 0, 0);
-   -ms-transform: translate3d(0, 0, 0);
-   transform: translate3d(0, 0, 0);
+    transition: background-position 2s ease;
   }
   
   main {
@@ -59,6 +43,7 @@ export default createGlobalStyle`
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     word-break: break-word;
+    will-change: background-color;
     transition: background-color 2s ease;
   }
 
