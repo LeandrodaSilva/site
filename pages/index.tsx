@@ -20,7 +20,7 @@ export default function Home() {
         <ul className={utilStyles.list}>
           <li className={utilStyles.listItem}>
             <FontAwesomeIcon height={15} icon={icons.faEnvelope} />{"  "}
-            <a href="mailto:ld_silva13@hotmail.com?subject=Olá%20Leandro">
+            <a href="mailto:me@leandrodasilva.dev?subject=Olá%20Leandro">
               me@leandrodasilva.dev
             </a>
           </li>
