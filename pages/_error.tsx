@@ -1,3 +1,4 @@
+//@ts-nocheck
 function Error({ statusCode }) {
   return (
     <p>

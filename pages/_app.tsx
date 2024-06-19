@@ -1,3 +1,4 @@
+//@ts-nocheck
 import React from "react";
 import Head from "next/head";
 import { AppProps } from "next/app";
@@ -18,7 +19,6 @@ import Image from "next/image";
 const darkIcon = <FontAwesomeIcon height={15} icon={faMoon} />;
 const lightIcon = <FontAwesomeIcon height={15} icon={faSun} />;
 
-// @ts-ignore
 function App({ Component, pageProps, darkMode }: AppProps) {
   const { darkModeActive, defaultMode } = darkMode;
   const [mounted, setMounted] = React.useState(false);

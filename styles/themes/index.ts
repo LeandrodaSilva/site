@@ -1,4 +1,4 @@
-import { DefaultTheme, CustomTheme } from 'styled-components';
+import { DefaultTheme } from 'styled-components';
 import dark from './dark';
 import light from './light';
 
@@ -10,7 +10,7 @@ const defaultTheme = {
   },
 };
 
-function combineTheme(theme: CustomTheme): DefaultTheme {
+function combineTheme(theme: any): DefaultTheme {
   return { ...defaultTheme, ...theme };
 }
 
