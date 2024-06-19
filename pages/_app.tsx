@@ -15,6 +15,7 @@ import Script from "next/script";
 import { siteTitle } from "../components/layout";
 import GlobalStyles from "../styles/global";
 import Image from "next/image";
+import { Analytics } from "@vercel/analytics/react"
 
 const darkIcon = <FontAwesomeIcon height={15} icon={faMoon} />;
 const lightIcon = <FontAwesomeIcon height={15} icon={faSun} />;
@@ -85,6 +86,7 @@ function App({ Component, pageProps, darkMode }: AppProps) {
 
   const body = (
     <ThemeProvider theme={{ darkMode: darkModeActive, ...theme }}>
+      <Analytics/>
       <div id="main-container" className={theme.title}>
         <audio id="a1" hidden>
           <source src="/sounds/click.mp3" type="audio/mpeg" />
