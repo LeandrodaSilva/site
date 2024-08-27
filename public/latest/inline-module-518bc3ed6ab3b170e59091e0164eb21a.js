@@ -1,0 +1,1 @@
+document.querySelector("select[name=cf_ptr_unidade]").value="5e1e6f5e-e27a-e811-a95f-000d3ac09449",window.SebRdStationForm.init({env:"dev",fields:{cf_tipo_formulario_hidden:{value:"Evento",hide:!0},cf_ptr_tipodelead:{value:"956840001",hide:!0},cf_ptr_identificacao:{options:{95684e4:"Responsável",956840001:"Responsável/Aluno"},hide:!0,value:"956840000"}}});
