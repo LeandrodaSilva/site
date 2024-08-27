@@ -1,4 +1,4 @@
-import{i as t,_ as e,n as o,s as i,x as r}from"./9bde2683.js";class s extends i{constructor(){super(...arguments),this.type="button",this.disabled=!1}__click(t){"submit"==this.type?window.dispatchEvent(new CustomEvent("seb-button-submit",{detail:""})):this.click(t)}render(){return r`
+import{i as t,_ as e,n as o,s as i,x as r}from"./48f1a509.js";class s extends i{constructor(){super(...arguments),this.type="button",this.disabled=!1}__click(t){"submit"===this.type?window.dispatchEvent(new CustomEvent("seb-button-submit",{detail:""})):this.click(t)}render(){return r`
       <button
         type="${this.type||"button"}"
         ?disabled="${this.disabled}"

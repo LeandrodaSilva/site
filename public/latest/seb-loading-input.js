@@ -1,4 +1,4 @@
-import{i as t,_ as e,n as i,s as r,x as o}from"./9bde2683.js";import"./68cb9b1b.js";class n extends r{constructor(){super(...arguments),this.primaryColor="#007bff",this.inputId=null,this.inputName=null}render(){return o`
+import{i as t,_ as e,n as i,s as r,x as o}from"./48f1a509.js";import"./70fc2b75.js";class n extends r{constructor(){super(...arguments),this.primaryColor="#007bff",this.inputId=null,this.inputName=null}render(){return o`
       <div
         style="--seb-primary-color: ${this.primaryColor}"
         class="loading-container"

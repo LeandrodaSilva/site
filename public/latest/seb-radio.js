@@ -1,4 +1,4 @@
-import{i as e,_ as t,n as i,s as o,x as n}from"./48f1a509.js";import{i as r,t as a,v as s}from"./5aea4bc9.js";class l extends o{constructor(){super(...arguments),this.name=self.crypto.randomUUID(),this.disabled=!1,this.checked=!1,this.uuid=s()}render(){return n`
+import{i as e,_ as t,n as i,s as o,x as n}from"./48f1a509.js";import{i as r,t as a}from"./afadae64.js";import{v as s}from"./31b20069.js";class l extends o{constructor(){super(...arguments),this.name=self.crypto.randomUUID(),this.disabled=!1,this.checked=!1,this.uuid=s()}render(){return n`
       <div>
         <span>
           <input
